@@ -4,134 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aero Horizon</title>
+<title>Aero Horizon - Hangar</title>
 
-<style>
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #07182e;
-    color: white;
-}
-
-.screen {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo {
-    font-size: 45px;
-    margin-bottom: 10px;
-}
-
-h1 {
-    font-size: 38px;
-    letter-spacing: 2px;
-}
-
-.subtitle {
-    color: #b8c7d9;
-    margin-bottom: 40px;
-}
-
-.menu {
-    width: 85%;
-    max-width: 400px;
-}
-
-button {
-    width: 100%;
-    margin: 10px 0;
-    padding: 18px;
-    border-radius: 15px;
-    border: 1px solid #ffffff33;
-    background: #102c52;
-    color: white;
-    font-size: 20px;
-}
-
-button:active {
-    transform: scale(0.97);
-}
-
-.footer {
-    position: absolute;
-    bottom: 20px;
-    color: #8094ad;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
-
 <body>
 
-<div class="screen">
-
-<div class="logo">✈️</div>
-
+<div id="info">
 <h1>AERO HORIZON</h1>
+<p>Hangar principal</p>
 
-<div class="subtitle">
-Compagnie aérienne internationale
+<div class="card">
+✈️ Aero Horizon L-900<br>
+Passagers : 300<br>
+Autonomie : 13 000 km<br>
+État : Neuf
+</div>
 </div>
 
 
-<div class="menu">
-
-<button onclick="newFlight()">
-🛫 Nouveau vol
-</button>
-
-<button onclick="fleet()">
-✈️ Ma flotte
-</button>
-
-<button onclick="company()">
-🏢 Ma compagnie
-</button>
-
-<button onclick="map()">
-🌍 Destinations
-</button>
-
-</div>
-
-
-<div class="footer">
-Version 0.2
-</div>
-
-
-</div>
-
-
-
-<script>
-
-function newFlight(){
-alert("Préparation du vol...");
-}
-
-function fleet(){
-alert("Votre flotte sera bientôt disponible.");
-}
-
-function company(){
-alert("Gestion de compagnie en développement.");
-}
-
-function map(){
-alert("Carte mondiale en préparation.");
-}
-
-</script>
-
+<script type="module" src="game.js"></script>
 
 </body>
 </html>
