@@ -3,113 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flight Simulator Mobile</title>
+
+<title>Aero Horizon</title>
 
 <style>
+
 body {
-  margin: 0;
-  background: #87ceeb;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #07182e;
+    color: white;
 }
 
-#game {
-  height: 100vh;
-  position: relative;
+.screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.sky {
-  height: 70%;
-  background: linear-gradient(#4aa9ff, #dff6ff);
+.logo {
+    font-size: 45px;
+    margin-bottom: 10px;
 }
 
-.ground {
-  height: 30%;
-  background: #555;
-  position: relative;
+h1 {
+    font-size: 38px;
+    letter-spacing: 2px;
 }
 
-.runway {
-  width: 80%;
-  height: 80px;
-  background: #222;
-  position: absolute;
-  bottom: 30px;
-  left: 10%;
-  border-radius: 10px;
+.subtitle {
+    color: #b8c7d9;
+    margin-bottom: 40px;
 }
 
-.plane {
-  position: absolute;
-  font-size: 70px;
-  bottom: 110px;
-  left: 20%;
-  transition: 2s;
-}
-
-.panel {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
+.menu {
+    width: 85%;
+    max-width: 400px;
 }
 
 button {
-  padding: 15px 25px;
-  margin: 5px;
-  font-size: 18px;
-  border-radius: 15px;
-  border: none;
+    width: 100%;
+    margin: 10px 0;
+    padding: 18px;
+    border-radius: 15px;
+    border: 1px solid #ffffff33;
+    background: #102c52;
+    color: white;
+    font-size: 20px;
 }
+
+button:active {
+    transform: scale(0.97);
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    color: #8094ad;
+}
+
 </style>
 
 </head>
 
+
 <body>
 
-<div id="game">
+<div class="screen">
 
-<div class="sky"></div>
+<div class="logo">✈️</div>
 
-<div class="ground">
-  <div class="runway"></div>
+<h1>AERO HORIZON</h1>
+
+<div class="subtitle">
+Compagnie aérienne internationale
 </div>
 
-<div class="plane" id="plane">
-✈️
+
+<div class="menu">
+
+<button onclick="newFlight()">
+🛫 Nouveau vol
+</button>
+
+<button onclick="fleet()">
+✈️ Ma flotte
+</button>
+
+<button onclick="company()">
+🏢 Ma compagnie
+</button>
+
+<button onclick="map()">
+🌍 Destinations
+</button>
+
 </div>
 
-<div class="panel">
-<button onclick="startEngine()">Démarrer moteur</button>
-<button onclick="takeOff()">Décoller</button>
+
+<div class="footer">
+Version 0.2
 </div>
 
+
 </div>
+
 
 
 <script>
 
-let engine = false;
-
-function startEngine(){
-  engine = true;
-  alert("Moteurs démarrés ✈️");
+function newFlight(){
+alert("Préparation du vol...");
 }
 
-function takeOff(){
+function fleet(){
+alert("Votre flotte sera bientôt disponible.");
+}
 
-  if(engine){
-    let plane = document.getElementById("plane");
-    plane.style.bottom = "500px";
-    plane.style.left = "60%";
-  }
-  else{
-    alert("Démarre d'abord les moteurs !");
-  }
+function company(){
+alert("Gestion de compagnie en développement.");
+}
 
+function map(){
+alert("Carte mondiale en préparation.");
 }
 
 </script>
+
 
 </body>
 </html>
